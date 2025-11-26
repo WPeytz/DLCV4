@@ -1,0 +1,160 @@
+/home/caio_iriarte/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/caio_iriarte/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /home/caio_iriarte/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+100%|██████████| 44.7M/44.7M [00:13<00:00, 3.43MB/s]
+
+Total parameters: 11,308,354
+Trainable parameters: 11,308,354
+
+Input shape: torch.Size([4, 3, 224, 224])
+Output shape: torch.Size([4, 2])
+Output (logits): tensor([[-0.1357, -0.8653],
+        [-0.2382,  0.2796],
+        [-0.2968, -0.5743],
+        [ 0.0810,  0.1941]], device='cuda:0', grad_fn=<AddmmBackward0>)
+
+Loaded training data for 532 images
+Train images: 426
+Val images: 106
+
+Dataset created: 20071 samples (4928 positive, 15143 negative)
+Dataset created: 7855 samples (1115 positive, 6740 negative)
+
+Train batches: 628
+Val batches: 246
+
+Class weights: tensor([0.6627, 2.0364], device='cuda:0')
+  Background weight: 0.6627
+  Pothole weight: 2.0364
+
+Training setup complete
+Loss: CrossEntropyLoss with class weights
+Optimizer: Adam (lr=0.001)
+Scheduler: ReduceLROnPlateau
+
+Epoch 1/15 (297.5s)
+  Train Loss: 0.2343, Train Acc: 0.8632
+  Val Loss: 0.3219, Val Acc: 0.8539
+  Saved best model (val_acc: 0.8539)
+Epoch 2: 100%|██████████| 628/628 [03:54<00:00,  2.68it/s, loss=0.0500, acc=92.11%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.22it/s]
+
+Epoch 2/15 (292.6s)
+  Train Loss: 0.1474, Train Acc: 0.9211
+  Val Loss: 0.2353, Val Acc: 0.9073
+  Saved best model (val_acc: 0.9073)
+Epoch 3: 100%|██████████| 628/628 [03:57<00:00,  2.65it/s, loss=0.0907, acc=93.92%]
+Evaluating: 100%|██████████| 246/246 [00:59<00:00,  4.12it/s]
+
+Epoch 3/15 (296.8s)
+  Train Loss: 0.1137, Train Acc: 0.9392
+  Val Loss: 0.3684, Val Acc: 0.8547
+Epoch 4: 100%|██████████| 628/628 [03:57<00:00,  2.64it/s, loss=0.0675, acc=95.44%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.20it/s]
+
+Epoch 4/15 (296.3s)
+  Train Loss: 0.0933, Train Acc: 0.9544
+  Val Loss: 0.2542, Val Acc: 0.8971
+Epoch 5: 100%|██████████| 628/628 [03:53<00:00,  2.69it/s, loss=0.1639, acc=95.91%]
+Evaluating: 100%|██████████| 246/246 [00:59<00:00,  4.17it/s]
+
+Epoch 5/15 (292.9s)
+  Train Loss: 0.0854, Train Acc: 0.9591
+  Val Loss: 0.2352, Val Acc: 0.9215
+  Saved best model (val_acc: 0.9215)
+Epoch 6: 100%|██████████| 628/628 [03:57<00:00,  2.64it/s, loss=0.1527, acc=96.13%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.19it/s]
+
+Epoch 6/15 (296.3s)
+  Train Loss: 0.0766, Train Acc: 0.9613
+  Val Loss: 0.2757, Val Acc: 0.9170
+Epoch 7: 100%|██████████| 628/628 [03:56<00:00,  2.66it/s, loss=1.1552, acc=96.83%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.23it/s]
+
+Epoch 7/15 (294.3s)
+  Train Loss: 0.0637, Train Acc: 0.9683
+  Val Loss: 0.2447, Val Acc: 0.9327
+  Saved best model (val_acc: 0.9327)
+Epoch 8: 100%|██████████| 628/628 [03:54<00:00,  2.68it/s, loss=0.0281, acc=96.31%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.22it/s]
+
+Epoch 8/15 (292.8s)
+  Train Loss: 0.0739, Train Acc: 0.9631
+  Val Loss: 0.2723, Val Acc: 0.9213
+Epoch 9: 100%|██████████| 628/628 [03:53<00:00,  2.69it/s, loss=0.0645, acc=97.41%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.21it/s]
+
+Epoch 9/15 (291.8s)
+  Train Loss: 0.0514, Train Acc: 0.9741
+  Val Loss: 0.2742, Val Acc: 0.9338
+  Saved best model (val_acc: 0.9338)
+Epoch 10: 100%|██████████| 628/628 [03:56<00:00,  2.66it/s, loss=0.0004, acc=98.36%]
+Evaluating: 100%|██████████| 246/246 [01:00<00:00,  4.08it/s]
+
+Epoch 10/15 (296.5s)
+  Train Loss: 0.0351, Train Acc: 0.9836
+  Val Loss: 0.2876, Val Acc: 0.9397
+  Saved best model (val_acc: 0.9397)
+Epoch 11: 100%|██████████| 628/628 [03:56<00:00,  2.66it/s, loss=0.3025, acc=98.86%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.19it/s]
+
+Epoch 11/15 (295.2s)
+  Train Loss: 0.0242, Train Acc: 0.9886
+  Val Loss: 0.3482, Val Acc: 0.9230
+Epoch 12: 100%|██████████| 628/628 [03:56<00:00,  2.66it/s, loss=0.0039, acc=98.80%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.18it/s]
+
+Epoch 12/15 (295.4s)
+  Train Loss: 0.0265, Train Acc: 0.9880
+  Val Loss: 0.2968, Val Acc: 0.9398
+  Saved best model (val_acc: 0.9398)
+Epoch 13: 100%|██████████| 628/628 [03:55<00:00,  2.67it/s, loss=0.0101, acc=98.96%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.21it/s]
+
+Epoch 13/15 (293.7s)
+  Train Loss: 0.0208, Train Acc: 0.9896
+  Val Loss: 0.4162, Val Acc: 0.9425
+  Saved best model (val_acc: 0.9425)
+Epoch 14: 100%|██████████| 628/628 [03:55<00:00,  2.67it/s, loss=0.0000, acc=99.36%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.19it/s]
+
+Epoch 14/15 (294.3s)
+  Train Loss: 0.0137, Train Acc: 0.9936
+  Val Loss: 0.3268, Val Acc: 0.9442
+  Saved best model (val_acc: 0.9442)
+Epoch 15: 100%|██████████| 628/628 [03:55<00:00,  2.66it/s, loss=0.0000, acc=99.46%]
+Evaluating: 100%|██████████| 246/246 [00:58<00:00,  4.18it/s]
+Epoch 15/15 (294.7s)
+  Train Loss: 0.0118, Train Acc: 0.9946
+  Val Loss: 0.3485, Val Acc: 0.9430
+
+Best validation accuracy: 0.9442
+Validation Results:
+  Loss: 0.3268
+  Accuracy: 0.9442
+
+==================================================
+Classification Report
+==================================================
+              precision    recall  f1-score   support
+
+  background       0.97      0.96      0.97      6740
+     pothole       0.79      0.83      0.81      1115
+
+    accuracy                           0.94      7855
+   macro avg       0.88      0.89      0.89      7855
+weighted avg       0.95      0.94      0.94      7855
+
+
+Confusion Matrix:
+              Predicted
+              background    pothole
+Actual background       6497        243
+          pothole        195        920
+
+Per-class Accuracy:
+  background: 0.9639
+  pothole: 0.8251
+
